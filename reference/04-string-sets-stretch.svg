@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="698" viewBox="0 0 780 698">
+<rect width="780" height="698" fill="#EEF0EA"/>
+<text x="50" y="60" font-family="Helvetica Neue,Arial,sans-serif" font-size="29" font-weight="700" fill="#171A16">STRETCHED</text>
+<text x="50" y="84" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="1" fill="#8A9184">no ticks · the stroke spans the real strings · numeral = top string</text>
+<line x1="50" y1="100" x2="730" y2="100" stroke="#171A16" stroke-width="1.4"/>
+<text x="50" y="136" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">ONE SHAPE, FOUR SETS — code 012</text>
+<text x="50" y="154" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="#8A9184">Identical fret contour. Height alone tells you how far across the neck it reaches.</text>
+<line x1="90.0" y1="196.0" x2="134.0" y2="196.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="211.0" x2="134.0" y2="211.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="226.0" x2="134.0" y2="226.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 99.0 196.0 L 112.0 211.0 L 125.0 226.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="84.0" y="200.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="112" y="286" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">2-3-4</text>
+<text x="112" y="301" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">span 2</text>
+<line x1="258.0" y1="196.0" x2="302.0" y2="196.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="258.0" y1="211.0" x2="302.0" y2="211.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="258.0" y1="226.0" x2="302.0" y2="226.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="258.0" y1="241.0" x2="302.0" y2="241.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 267.0 196.0 L 280.0 211.0 L 293.0 241.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="252.0" y="200.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">3</text>
+<text x="280" y="286" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">3-4-6</text>
+<text x="280" y="301" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">span 3</text>
+<line x1="426.0" y1="196.0" x2="470.0" y2="196.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="426.0" y1="211.0" x2="470.0" y2="211.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="426.0" y1="226.0" x2="470.0" y2="226.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="426.0" y1="241.0" x2="470.0" y2="241.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="426.0" y1="256.0" x2="470.0" y2="256.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 435.0 196.0 L 448.0 226.0 L 461.0 256.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="420.0" y="200.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="448" y="286" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">2-4-6</text>
+<text x="448" y="301" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">span 4</text>
+<line x1="594.0" y1="196.0" x2="638.0" y2="196.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="594.0" y1="211.0" x2="638.0" y2="211.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="594.0" y1="226.0" x2="638.0" y2="226.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="594.0" y1="241.0" x2="638.0" y2="241.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="594.0" y1="256.0" x2="638.0" y2="256.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 603.0 196.0 L 616.0 226.0 L 629.0 256.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="588.0" y="200.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="616" y="286" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">1-3-5</text>
+<text x="616" y="301" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">span 4</text>
+<line x1="50" y1="326" x2="730" y2="326" stroke="#D6DBCF" stroke-width="1"/>
+<text x="50" y="360" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">ONE CHORD, EVERY SET — Dm7 around 8th position</text>
+<text x="50" y="378" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="#8A9184">Rootless only. This is the row that had no home on 4-3-2 — look how many it has elsewhere.</text>
+<line x1="90.0" y1="408.0" x2="134.0" y2="408.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="423.0" x2="134.0" y2="423.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="438.0" x2="134.0" y2="438.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 112.0 408.0 L 99.0 423.0 L 125.0 438.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="84.0" y="412.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="147.0" y="428" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#B0401F">5</text>
+<text x="112" y="494" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8A9184">102 · 2-3-4</text>
+<line x1="228.0" y1="408.0" x2="272.0" y2="408.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="228.0" y1="423.0" x2="272.0" y2="423.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="228.0" y1="438.0" x2="272.0" y2="438.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 237.0 408.0 L 250.0 423.0 L 250.0 438.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="222.0" y="412.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">4</text>
+<text x="285.0" y="428" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#B0401F">7</text>
+<text x="250" y="494" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8A9184">011 · 4-5-6</text>
+<line x1="366.0" y1="408.0" x2="410.0" y2="408.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="366.0" y1="423.0" x2="410.0" y2="423.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="366.0" y1="438.0" x2="410.0" y2="438.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="366.0" y1="453.0" x2="410.0" y2="453.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 401.0 408.0 L 375.0 423.0 L 388.0 453.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="360.0" y="412.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="423.0" y="436" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#B0401F">6</text>
+<text x="388" y="494" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8A9184">201 · 1-2-4</text>
+<line x1="504.0" y1="408.0" x2="548.0" y2="408.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="504.0" y1="423.0" x2="548.0" y2="423.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="504.0" y1="438.0" x2="548.0" y2="438.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="504.0" y1="453.0" x2="548.0" y2="453.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="504.0" y1="468.0" x2="548.0" y2="468.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 513.0 408.0 L 526.0 438.0 L 539.0 468.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="498.0" y="412.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="561.0" y="443" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#B0401F">6</text>
+<text x="526" y="494" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8A9184">012 · 2-4-6</text>
+<line x1="642.0" y1="408.0" x2="686.0" y2="408.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="642.0" y1="423.0" x2="686.0" y2="423.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="642.0" y1="438.0" x2="686.0" y2="438.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="642.0" y1="453.0" x2="686.0" y2="453.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="642.0" y1="468.0" x2="686.0" y2="468.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 664.0 408.0 L 651.0 453.0 L 664.0 468.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="636.0" y="412.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="699.0" y="443" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#B0401F">7</text>
+<text x="664" y="494" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8A9184">101 · 1-4-5</text>
+<line x1="90.0" y1="530.0" x2="134.0" y2="530.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="545.0" x2="134.0" y2="545.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="560.0" x2="134.0" y2="560.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="575.0" x2="134.0" y2="575.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="90.0" y1="590.0" x2="134.0" y2="590.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 125.0 530.0 L 99.0 575.0 L 99.0 590.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="84.0" y="534.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="147.0" y="565" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#B0401F">8</text>
+<text x="112" y="616" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8A9184">200 · 2-5-6</text>
+<line x1="228.0" y1="530.0" x2="272.0" y2="530.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="228.0" y1="545.0" x2="272.0" y2="545.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="228.0" y1="560.0" x2="272.0" y2="560.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="228.0" y1="575.0" x2="272.0" y2="575.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<line x1="228.0" y1="590.0" x2="272.0" y2="590.0" stroke="#D6DBCF" stroke-width="0.8"/>
+<path d="M 237.0 530.0 L 263.0 545.0 L 237.0 590.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="222.0" y="534.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="285.0" y="565" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#B0401F">8</text>
+<text x="250" y="616" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8A9184">020 · 1-2-5</text>
+<line x1="50" y1="628" x2="730" y2="628" stroke="#171A16" stroke-width="1.2"/>
+<text x="50" y="654" font-family="Helvetica Neue,Arial,sans-serif" font-size="11.5" fill="#171A16">Row height now carries meaning, so rows size to their tallest glyph — not a fixed pitch.</text>
+<text x="50" y="672" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="#8A9184">A 1-to-6 set is 5 gaps tall, two and a half times an adjacent set. Dense charts will breathe unevenly.</text>
+</svg>

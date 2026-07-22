@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="960" viewBox="0 0 760 960">
+<rect width="760" height="960" fill="#EEF0EA"/>
+<text x="56" y="66" font-family="Helvetica Neue,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#171A16">THE HAND</text>
+<text x="56" y="90" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="1" fill="#8A9184">cursive register · one stroke, top → bottom · arrow = pen direction</text>
+<line x1="56" y1="108" x2="704" y2="108" stroke="#171A16" stroke-width="1.4"/>
+<text x="56" y="144" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">STEM</text>
+<line x1="152" y1="156.0" x2="228" y2="156.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="152" y1="224.0" x2="228" y2="224.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="190" y1="156.0" x2="190" y2="224.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 190 156 L 190 224" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190.0 224.0 L 186.4 218.0 L 193.6 218.0 Z" fill="#1B4DB3"/>
+<text x="190" y="246" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">000</text>
+<text x="190" y="261" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">line</text>
+<text x="56" y="314" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">BELLY — bow out and return</text>
+<line x1="152" y1="326.0" x2="228" y2="326.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="152" y1="394.0" x2="228" y2="394.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="190" y1="326.0" x2="190" y2="394.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 190 326 Q 211 360 190 394" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190.0 394.0 L 188.9 387.1 L 195.6 389.8 Z" fill="#1B4DB3"/>
+<text x="190" y="416" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">010</text>
+<text x="190" y="431" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">point-R</text>
+<line x1="282" y1="326.0" x2="358" y2="326.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="282" y1="394.0" x2="358" y2="394.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="320" y1="326.0" x2="320" y2="394.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 320 326 Q 299 360 320 394" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 320.0 394.0 L 314.4 389.8 L 321.1 387.1 Z" fill="#1B4DB3"/>
+<text x="320" y="416" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">101</text>
+<text x="320" y="431" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">point-L</text>
+<line x1="412" y1="326.0" x2="488" y2="326.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="412" y1="394.0" x2="488" y2="394.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="450" y1="326.0" x2="450" y2="394.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 450 326 L 471 360 L 450 394" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 450.0 394.0 L 451.7 387.2 L 456.8 392.3 Z" fill="#1B4DB3"/>
+<text x="450" y="416" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">020</text>
+<text x="450" y="431" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">wide-R</text>
+<line x1="542" y1="326.0" x2="618" y2="326.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="542" y1="394.0" x2="618" y2="394.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="580" y1="326.0" x2="580" y2="394.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 580 326 L 559 360 L 580 394" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 580.0 394.0 L 573.2 392.3 L 578.3 387.2 Z" fill="#1B4DB3"/>
+<text x="580" y="416" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">202</text>
+<text x="580" y="431" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">wide-L</text>
+<text x="56" y="484" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">SLANT — travel across</text>
+<line x1="152" y1="496.0" x2="228" y2="496.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="152" y1="564.0" x2="228" y2="564.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="190" y1="496.0" x2="190" y2="564.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 169 496 L 211 564" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211.0 564.0 L 204.2 562.3 L 209.3 557.2 Z" fill="#1B4DB3"/>
+<text x="190" y="586" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">012</text>
+<text x="190" y="601" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">down-slope</text>
+<line x1="282" y1="496.0" x2="358" y2="496.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="282" y1="564.0" x2="358" y2="564.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="320" y1="496.0" x2="320" y2="564.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 341 496 L 299 564" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299.0 564.0 L 300.7 557.2 L 305.8 562.3 Z" fill="#1B4DB3"/>
+<text x="320" y="586" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">210</text>
+<text x="320" y="601" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">up-slope</text>
+<text x="56" y="654" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">FLICK — corner at one end</text>
+<line x1="152" y1="666.0" x2="228" y2="666.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="152" y1="734.0" x2="228" y2="734.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="190" y1="666.0" x2="190" y2="734.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 211 666 L 190 666 L 190 734" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190.0 734.0 L 186.4 728.0 L 193.6 728.0 Z" fill="#1B4DB3"/>
+<text x="190" y="756" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">100</text>
+<text x="190" y="771" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">head-R</text>
+<line x1="282" y1="666.0" x2="358" y2="666.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="282" y1="734.0" x2="358" y2="734.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="320" y1="666.0" x2="320" y2="734.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 299 666 L 320 666 L 320 734" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 320.0 734.0 L 316.4 728.0 L 323.6 728.0 Z" fill="#1B4DB3"/>
+<text x="320" y="756" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">011</text>
+<text x="320" y="771" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">head-L</text>
+<line x1="412" y1="666.0" x2="488" y2="666.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="412" y1="734.0" x2="488" y2="734.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="450" y1="666.0" x2="450" y2="734.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 450 666 L 450 734 L 471 734" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 471.0 734.0 L 465.0 737.6 L 465.0 730.4 Z" fill="#1B4DB3"/>
+<text x="450" y="756" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">001</text>
+<text x="450" y="771" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">foot-R</text>
+<line x1="542" y1="666.0" x2="618" y2="666.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="542" y1="734.0" x2="618" y2="734.0" stroke="#D6DBCF" stroke-width="1"/>
+<line x1="580" y1="666.0" x2="580" y2="734.0" stroke="#C3CABF" stroke-width="0.7" stroke-dasharray="2 3"/>
+<path d="M 580 666 L 580 734 L 559 734" fill="none" stroke="#1B4DB3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 559.0 734.0 L 565.0 730.4 L 565.0 737.6 Z" fill="#1B4DB3"/>
+<text x="580" y="756" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2" fill="#171A16">110</text>
+<text x="580" y="771" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="#8A9184">foot-L</text>
+<line x1="56" y1="792" x2="704" y2="792" stroke="#C3CABF" stroke-width="1"/>
+<text x="56" y="818" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#171A16">Read by motion, not by aim: round vs. angular, and where the corner sits — both survive a fast scrawl.</text>
+<text x="56" y="836" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#8A9184">Same code as the typeset form. Attach string-set + base fret to place it. The 8 stretch shapes take angular-belly / double-flick forms.</text>
+<text x="56" y="872" font-family="ui-monospace,Menlo,monospace" font-size="11" letter-spacing="2" fill="#1B4DB3">IN A LINE — Bb / Bb6 / Cm7 / F7</text>
+<path d="M 451 864 L 409 932" fill="none" stroke="#171A16" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 409.0 932.0 L 410.4 926.3 L 414.7 930.6 Z" fill="#171A16"/>
+<path d="M 500 864 Q 479 898 500 932" fill="none" stroke="#171A16" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 500.0 932.0 L 495.4 928.5 L 500.9 926.2 Z" fill="#171A16"/>
+<path d="M 570 864 L 570 932" fill="none" stroke="#171A16" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 570.0 932.0 L 567.0 927.0 L 573.0 927.0 Z" fill="#171A16"/>
+<path d="M 619 864 L 661 932" fill="none" stroke="#171A16" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 661.0 932.0 L 655.3 930.6 L 659.6 926.3 Z" fill="#171A16"/>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="846" viewBox="0 0 780 846">
+<rect width="780" height="846" fill="#EEF0EA"/>
+<text x="50" y="60" font-family="Helvetica Neue,Arial,sans-serif" font-size="29" font-weight="700" fill="#171A16">ANY THREE STRINGS</text>
+<text x="50" y="84" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="1" fill="#8A9184">same 19 shapes · numeral = top string · tick = a skipped string</text>
+<line x1="50" y1="100" x2="730" y2="100" stroke="#171A16" stroke-width="1.4"/>
+<text x="50" y="136" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">READING THE SET</text>
+<text x="50" y="154" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="#8A9184">Top numeral plus tick positions determine the strings completely. No set tag needed.</text>
+<path d="M 97.0 205.0 L 110.0 225.0 L 123.0 245.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="86" y="210" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="110" y="271" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">2-3-4</text>
+<text x="110" y="287" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">adjacent — no tick</text>
+<path d="M 265.0 205.0 L 278.0 225.0 L 291.0 245.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="290.8" y1="230.9" x2="278.2" y2="239.1" stroke="#B0401F" stroke-width="2.4" stroke-linecap="round"/>
+<text x="254" y="210" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">3</text>
+<text x="278" y="271" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">3-4-6</text>
+<text x="278" y="287" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">skip the 5th</text>
+<path d="M 433.0 205.0 L 446.0 225.0 L 459.0 245.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="445.8" y1="210.9" x2="433.2" y2="219.1" stroke="#B0401F" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="458.8" y1="230.9" x2="446.2" y2="239.1" stroke="#B0401F" stroke-width="2.4" stroke-linecap="round"/>
+<text x="422" y="210" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="446" y="271" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">2-4-6</text>
+<text x="446" y="287" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">skip 5th and 3rd</text>
+<path d="M 601.0 205.0 L 614.0 225.0 L 627.0 245.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="613.8" y1="210.9" x2="601.2" y2="219.1" stroke="#B0401F" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="626.8" y1="230.9" x2="614.2" y2="239.1" stroke="#B0401F" stroke-width="2.4" stroke-linecap="round"/>
+<text x="590" y="210" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="614" y="271" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#171A16">1-3-5</text>
+<text x="614" y="287" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9.5" fill="#8A9184">skip 4th and 2nd</text>
+<line x1="50" y1="316" x2="730" y2="316" stroke="#D6DBCF" stroke-width="1"/>
+<text x="50" y="348" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">MACK THE KNIFE — HEAD, 8TH POSITION THROUGHOUT</text>
+<text x="50" y="366" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="#8A9184">The hand never shifts. Only the string set and the shape change.</text>
+<line x1="38" y1="400" x2="38" y2="486" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="50" y="394" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Bb6</text>
+<path d="M 109.0 420.0 L 83.0 440.0 L 109.0 460.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="425" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="126" y="446" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="96" y="482" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">202 · 123</text>
+<line x1="210" y1="400" x2="210" y2="486" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="222" y="394" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Cm7</text>
+<path d="M 255.0 420.0 L 255.0 440.0 L 255.0 460.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="244" y="425" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="298" y="446" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="268" y="482" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">000 · 234</text>
+<line x1="382" y1="400" x2="382" y2="486" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="394" y="394" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">F7</text>
+<path d="M 427.0 420.0 L 453.0 440.0 L 427.0 460.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="416" y="425" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="470" y="446" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="440" y="482" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">020 · 123</text>
+<line x1="554" y1="400" x2="554" y2="486" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="566" y="394" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Bb6</text>
+<path d="M 625.0 420.0 L 599.0 440.0 L 625.0 460.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="588" y="425" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="642" y="446" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="612" y="482" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">202 · 123</text>
+<line x1="38" y1="528" x2="38" y2="614" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="50" y="522" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Dm7</text>
+<path d="M 83.0 548.0 L 109.0 568.0 L 109.0 588.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="553" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="126" y="574" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="96" y="610" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">022 · 123</text>
+<line x1="210" y1="528" x2="210" y2="614" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="222" y="522" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Dbo7</text>
+<path d="M 255.0 548.0 L 268.0 568.0 L 255.0 588.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="244" y="553" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="298" y="574" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="268" y="610" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">010 · 234</text>
+<line x1="382" y1="528" x2="382" y2="614" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="394" y="522" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Cm7</text>
+<path d="M 427.0 548.0 L 427.0 568.0 L 427.0 588.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="416" y="553" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="470" y="574" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="440" y="610" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">000 · 234</text>
+<line x1="554" y1="528" x2="554" y2="614" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="566" y="522" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">F7</text>
+<path d="M 625.0 548.0 L 599.0 568.0 L 625.0 588.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="588" y="553" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="642" y="574" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="612" y="610" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">202 · 234</text>
+<line x1="38" y1="656" x2="38" y2="742" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="50" y="650" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Cm7</text>
+<path d="M 83.0 676.0 L 83.0 696.0 L 83.0 716.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="681" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">2</text>
+<text x="126" y="702" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="96" y="738" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">000 · 234</text>
+<line x1="210" y1="656" x2="210" y2="742" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="222" y="650" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">F7</text>
+<path d="M 255.0 676.0 L 281.0 696.0 L 255.0 716.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="244" y="681" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="298" y="702" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="268" y="738" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">020 · 123</text>
+<line x1="382" y1="656" x2="382" y2="742" stroke="#D6DBCF" stroke-width="1.2"/>
+<text x="394" y="650" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700" fill="#171A16">Bb6</text>
+<path d="M 453.0 676.0 L 427.0 696.0 L 453.0 716.0" fill="none" stroke="#1B4DB3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="416" y="681" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#171A16">1</text>
+<text x="470" y="702" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#B0401F">8</text>
+<text x="440" y="738" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.5" fill="#8A9184">202 · 123</text>
+<line x1="50" y1="776" x2="730" y2="776" stroke="#171A16" stroke-width="1.2"/>
+<text x="50" y="802" font-family="Helvetica Neue,Arial,sans-serif" font-size="11.5" fill="#171A16">Adjacent sets only: 10 frets of hand travel. Any three strings: zero.</text>
+<text x="50" y="820" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="#8A9184">Cost: 7 of these 11 are full three-fret stretches. Standing still is paid for with the fingers.</text>
+</svg>
