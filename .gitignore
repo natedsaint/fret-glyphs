@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+
+# Rendered output
+*.svg
+
+# Copyrighted input charts and anything imported from them (keep out of the repo)
+*.pdf
+mack-imported.pro
