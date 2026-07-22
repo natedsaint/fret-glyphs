@@ -52,12 +52,16 @@ you use. All 20 string sets share the same 19 shapes.
 
 ### The alphabet — all 19 shapes
 
-Read each grid the way the fret hand sees it: the three rows are the three strings
+<img src="reference/01-alphabet.png" alt="The 19 fret-hand glyphs, drawn as single-stroke shapes with their codes" width="760">
+
+Read each shape the way the fret hand sees it: the three rows are the three strings
 (highest pitch on top), the three columns are three frets with the **nut on the left**,
-and `#` marks where a finger lands. The three-digit code is just those columns read top
-to bottom. The vertical line is the only shape that mirrors to itself; the other 18 pair
-off under left-right mirroring — so the whole alphabet is really **10 shapes plus a flip
-rule**.
+and the stroke traces the finger path top string to bottom. The three-digit code is just
+the fret column of each note read top to bottom. The vertical line is the only shape that
+mirrors to itself; the other 18 pair off under left-right mirroring — so the whole
+alphabet is really **10 shapes plus a flip rule**.
+
+The same 19 as plain text (`#` = a fretted note), in case the image above doesn't load:
 
 ```
 vertical line
