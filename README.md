@@ -6,7 +6,8 @@ tool that picks voicings for a set of changes by minimising hand movement.
 Write your changes in a plain text file, run one command, get an SVG chart where every
 chord carries a small glyph showing exactly how to finger it.
 
-No dependencies. Python 3.8+, standard library only.
+No dependencies for the core: Python 3.8+, standard library only. (The optional PDF
+importer is the sole exception — it needs PyMuPDF.)
 
 ---
 
@@ -97,6 +98,35 @@ with `b`/`#` roots.
 
 ---
 
+## Importing from a PDF (optional)
+
+If your chart is an **engraved, digital** PDF — exported from Finale, Sibelius,
+MuseScore and the like, with a real text layer — `pdfimport.py` pulls the chord
+symbols straight into a changes file:
+
+```bash
+pip install pymupdf                          # the one extra dependency
+python3 pdfimport.py "chart.pdf" -o chart.pro
+python3 pdfimport.py "chart.pdf"             # or just print to stdout
+```
+
+It works because chord symbols sit in their own font: it reads *only* those spans and
+rebuilds bars and sections from the staff-line and barline geometry, so it never has to
+recognise a single note. Every symbol is checked against the chord grammar — anything it
+can't parse is written as a `#?`-flagged comment instead of being trusted, and the file
+carries a `VERIFY before trusting` header.
+
+What it deliberately does **not** do:
+
+- **Scanned or photographed charts.** No text layer means OCR/OMR, which is out of
+  scope — it refuses them with a clear message rather than guessing.
+- **Repeats, endings, and vamps.** These aren't in the chord layer, so empty measures
+  become `%` and you re-add the structure by hand.
+
+Treat the output as a fast, verifiable first draft — not a transcription.
+
+---
+
 ## How voicings get chosen
 
 `voice.py` enumerates every legal three-note shape for each chord across all 20 string
@@ -128,6 +158,7 @@ sheet means that voicing does contain its root.
 | `voice.py` | fretboard model, shape enumeration, voice-leading search |
 | `chartparse.py` | changes-file parser; preserves bars, sections, repeats |
 | `render.py` | glyph drawing; the tick/stretch toggle lives here |
+| `pdfimport.py` | optional engraved-PDF → changes-file importer (needs PyMuPDF) |
 | `mack.pro` | worked example |
 | `reference/` | the alphabet and notation plates |
 
@@ -146,8 +177,9 @@ for sym, code, fret, roles, frets, strings in lead_free(['Dm7','G7','C6'], home=
 - **Three notes per voicing.** Four-note shapes would need a 4×3 box and a larger
   alphabet.
 - **Standard tuning only** — change `OPEN` in `voice.py` for anything else.
-- **No PDF or MusicXML import.** Changes are typed by hand. Reading engraved charts
-  automatically is an OMR problem, well outside this tool.
+- **Import is limited.** `pdfimport.py` reads *engraved, digital* PDFs (see above), but
+  scanned charts (OCR/OMR) and MusicXML are not supported, and repeat/vamp structure is
+  never recovered from a PDF.
 - **The example file is a reconstruction.** The bar rhythm in `mack.pro` was inferred
   from a printed chart, including the assumption that the opening `Bb6` is a four-bar
   vamp before the sixteen-bar form. Correct it and re-run; voicings recompute.
