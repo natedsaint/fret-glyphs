@@ -69,8 +69,23 @@ does the same for a vertical voicing shape. Confirmed no ready-made glyph set to
 - **Four-note voicings.** Would need a 4x3 box and a bigger alphabet. Not attempted.
 - **The 8 stretch shapes have no handwriting forms yet.** They should fall out of the
   existing grammar as angular-belly-plus-flick or double-flick; unverified.
-- **Chart import.** Everything is typed by hand. MusicXML would be the sane route;
-  PDF means OMR and is out of scope.
+- **Chart import.** MusicXML would still be the sane route for anything.
+  Handwritten input is no longer the only path: `pdfimport.py` pulls chord symbols
+  out of an *engraved, digital* PDF into `.pro`. It works because chord symbols
+  live in their own font (Finale's RepriseChordsStd et al.), so you filter to
+  those spans and never touch the notation — no OMR. On the Mack the Knife guitar
+  part it recovered 94/94 chord symbols (flats, sharps, slash and altered chords),
+  auto-flagged the one ambiguous glyph with `#?`, and bars every system to match
+  the engraving — including measures that legitimately hold several walking
+  chords (the chromatic m9 run is `| Dm9 | Dm9 Ebm9 Em9 | Fm9 | Fm9 Em9 Ebm9 |`,
+  *not* `mack.pro`'s eight-bars-of-one, which was always a flagged reconstruction).
+  Barlines are taken only from staff-spanning verticals (rhythm-slash stems are
+  ignored), and whitespace-joined chord runs are split at the glyph so a chord
+  starting just past a barline keeps its own measure. Still genuinely out of scope:
+  **scanned/image PDFs** (OCR/OMR), and **repeat/ending/vamp recovery** (empty
+  measures just become `%`; the reader re-derives structure). The `#?`-flagged
+  header still says "VERIFY before trusting" — right, because structure is the
+  layer this can't fully recover.
 - **`mack.pro` bar rhythm is a reconstruction**, not a transcription — inferred from a
   printed chart, including the assumption that the opening Bb6 is a four-bar vamp
   ahead of the sixteen-bar form. Verify against the real part before trusting it.
@@ -82,7 +97,10 @@ does the same for a vertical voicing shape. Confirmed no ready-made glyph set to
 (`lead_free`) over every legal shape on all 20 string sets. `render.py` owns all glyph
 drawing and the tick/stretch toggle — if a plate and the sheet ever disagree visually,
 the cause is something bypassing `draw_glyph`. `chartparse.py` preserves structure.
-`sheet.py` is layout plus CLI.
+`sheet.py` is layout plus CLI. `pdfimport.py` is an **optional** converter (the
+only module that needs a third-party dep, PyMuPDF — the core stays stdlib-only):
+engraved PDF -> `.pro`, by font-filtering chord spans and reconstructing
+systems/bars from staff-line and barline vectors.
 
 Layout gotcha, hit repeatedly: **derive SVG canvas height from content**, never
 hardcode it. Row height depends on glyph mode, so a fixed height silently clips.
