@@ -50,6 +50,43 @@ object, which is why nothing here needs a lookup table.
 Because the code only describes fret offsets, it does not care *which* three strings
 you use. All 20 string sets share the same 19 shapes.
 
+### The alphabet — all 19 shapes
+
+Read each grid the way the fret hand sees it: the three rows are the three strings
+(highest pitch on top), the three columns are three frets with the **nut on the left**,
+and `#` marks where a finger lands. The three-digit code is just those columns read top
+to bottom. The vertical line is the only shape that mirrors to itself; the other 18 pair
+off under left-right mirroring — so the whole alphabet is really **10 shapes plus a flip
+rule**.
+
+```
+vertical line
+  000
+  #..
+  #..
+  #..
+
+9 mirror pairs (each shape beside its left-right flip):
+
+  001 110         002 220         010 101
+  #.. .#.         #.. ..#         #.. .#.
+  #.. .#.         #.. ..#         .#. #..
+  .#. #..         ..# #..         #.. .#.
+
+  011 100         012 210         020 202
+  #.. .#.         #.. ..#         #.. ..#
+  .#. #..         .#. .#.         ..# #..
+  .#. #..         ..# #..         #.. ..#
+
+  021 201         022 200         102 120
+  #.. ..#         #.. ..#         .#. .#.
+  ..# #..         ..# #..         #.. ..#
+  .#. .#.         ..# #..         ..# #..
+```
+
+The drawn plate — single-stroke glyphs, string-set styles, and the handwriting forms —
+lives in [`reference/01-alphabet.svg`](reference/01-alphabet.svg).
+
 ### Two ways to draw a skipped string
 
 - **tick** — glyph height is fixed; a red tick crosses the stroke wherever a string is
