@@ -19,7 +19,15 @@ QUAL = {
     'o7'  : {0:'R',3:'3',6:'5',9:'7'},
     'm7b5': {0:'R',3:'3',6:'5',10:'7'},
     'maj7': {0:'R',4:'3',7:'5',11:'7'},
+    # Plain triads: no 7th, so there is no guide-tone pair to keep -- the whole
+    # R-3-5 is voiced. Inversion (which tone sits in the bass) is chosen by the
+    # root preference instead of root presence; see _triad_pen / lead_free.
+    'maj' : {0:'R',4:'3',7:'5'},
+    'min' : {0:'R',3:'3',7:'5'},
+    'dim' : {0:'R',3:'3',6:'5'},
+    'aug' : {0:'R',4:'3',8:'5'},
 }
+TRIADS = {q for q, t in QUAL.items() if '7' not in t.values()}
 
 def parse(sym):
     sym = sym.strip()
@@ -31,11 +39,18 @@ def parse(sym):
     for q in ('maj7','m7b5','m9','m7','13','o7','7','6'):
         if rest.startswith(q):
             return PC[root], q
-    return PC[root], '6' if rest == '' else 'm7'
+    if rest in ('', 'maj', 'M'):   return PC[root], 'maj'   # bare root = major triad
+    if rest in ('m', 'min', '-'):  return PC[root], 'min'
+    if rest == 'o':                return PC[root], 'dim'   # 'dim'/'°' -> 'o' above
+    if rest in ('aug', '+'):       return PC[root], 'aug'
+    return PC[root], 'm7'
 
 def voicings(root, qual, strings, fmin=1, fmax=15):
-    """All 3-note, one-note-per-string, <=3-fret-span shapes matching the chord."""
+    """All 3-note, one-note-per-string, <=3-fret-span shapes matching the chord.
+    A triad (no 7th) is voiced as its complete R-3-5; a 6th/7th chord must carry
+    both guide tones (3rd and 7th)."""
     tones = QUAL[qual]
+    triad = qual in TRIADS
     out = []
     for frets in product(range(fmin, fmax+1), repeat=3):
         if max(frets) - min(frets) > 2:
@@ -47,10 +62,10 @@ def voicings(root, qual, strings, fmin=1, fmax=15):
                 break
             roles.append(tones[iv])
         else:
-            if '3' not in roles or '7' not in roles:   # guide tones mandatory
+            if len(set(roles)) < 3:                    # three distinct chord tones
                 continue
-            if len(set(roles)) < 3:                    # no doubled roles
-                continue
+            if not triad and ('3' not in roles or '7' not in roles):
+                continue                               # guide tones mandatory
             out.append((frets, roles))
     return out
 
@@ -148,6 +163,18 @@ def _root_pen(roles, pref):
     if pref == 'rootless': return FORCE if has else 0.0
     return ROOT_PEN if has else 0.0
 
+def _triad_pen(roles, pref):
+    """A triad always contains the root, so 'rootless' can't drop it -- instead it
+    means keep the root out of the bass: first inversion (third in the bass) by
+    default and on '~', root position (root in the bass) on '!'. roles[0] is the
+    bass note (the set's lowest-pitch string)."""
+    want = 'R' if pref == 'root' else '3'
+    strength = FORCE if pref else ROOT_PEN
+    return 0.0 if roles[0] == want else strength
+
+def _voice_pen(roles, pref, triad):
+    return _triad_pen(roles, pref) if triad else _root_pen(roles, pref)
+
 def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0.25):
     """DP over (string set, fretting). State includes the string set, so the hand
     may move to a skipped set when that keeps the position still."""
@@ -155,17 +182,18 @@ def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0
     for sym in chart:
         clean,pref = strip_root_marker(sym)
         r,q = parse(clean)
+        triad = q in TRIADS
         cands=[]
         for st in ALL_SETS:
             if prefer and st not in prefer: continue
             for frets,roles in voicings(r,q,st):
                 if abs(sum(frets)/3 - home) <= span:
                     cands.append((st,frets,roles))
-        layers.append((sym,cands,pref))
+        layers.append((sym,cands,pref,triad))
     INF=float('inf'); best=[{} for _ in layers]
-    for i,(sym,cands,pref) in enumerate(layers):
+    for i,(sym,cands,pref,triad) in enumerate(layers):
         for j,(st,frets,roles) in enumerate(cands):
-            pen = _root_pen(roles, pref)
+            pen = _voice_pen(roles, pref, triad)
             pen += abs(sum(frets)/3 - home)*0.35
             pen += (st[0]-st[2]-2)*skip_pen      # cost (or reward) for wide skips
             if i==0:
@@ -181,7 +209,7 @@ def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0
                 best[i][j]=(bc+pen,bp)
     out,k=[],min(best[-1],key=lambda x:best[-1][x][0])
     for i in range(len(layers)-1,-1,-1):
-        sym,cands,pref=layers[i]; st,frets,roles=cands[k]
+        sym,cands,pref,triad=layers[i]; st,frets,roles=cands[k]
         cd,base=shape_of(frets,st)
         out.append((sym,cd,base,roles,frets,st)); k=best[i][k][1]
     return out[::-1]

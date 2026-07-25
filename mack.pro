@@ -9,10 +9,12 @@
 # X!  force the root INTO the voicing (as played)   X~  force it rootless
 #     (default is rootless-preferred; the marker overrides per chord)
 
-# The tonic 6 chord is comped with its root here, the way it sits on the
-# recording -- hence Bb6! (and C6! in the shout, the same chord up a tone).
+# Intro vamp, Freddie-Green style: the tonic triad rocks to its six chord
+# (Bb -> Bb6, the 5th walking up to the 6th). All rooted as played -- the '!'
+# puts the root in the bass for the triad and keeps it in the six chord. The
+# head/shout tonic 6 chords are likewise Bb6! / C6!.
 {section: A - a la Freddie Green}
-| Bb6! | % | % | % |
+| Bb! | Bb6! | Bb! | Bb6! |
 
 {section: B - head}
 |: Bb6! | % | Cm7 | % |
