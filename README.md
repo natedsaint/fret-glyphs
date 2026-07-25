@@ -126,6 +126,7 @@ styles.
 |---|---|
 | `\| chord \|` | one bar |
 | `\| Cm7 F7 \|` | two chords in a bar, split evenly |
+| `Bb6!` / `Bb6~` | force the root **in** (as played) / **out** for that chord |
 | `%` | repeat the previous bar |
 | `\|:` … `:\|` | repeat marks |
 | `{section: name}` | starts a labelled section |
@@ -134,8 +135,10 @@ styles.
 Repeats are **not** expanded before voicing. Each written bar is voiced once, so a
 repeated section is fingered identically both times through.
 
-Chord symbols understood: `6`, `m7`, `m9`, `7`, `13`, `o7` (or `dim`), `m7b5`, `maj7`,
-with `b`/`#` roots.
+Chord symbols understood: plain triads — `Bb` (major), `Bbm` (minor), `Bbo`/`Bbdim`,
+`Bb+`/`Bbaug` — and sixths/sevenths — `6`, `m7`, `m9`, `7`, `13`, `o7` (or `dim7`),
+`m7b5`, `maj7` — all with `b`/`#` roots. A bare root is a **major triad** (`Bb`), not a
+sixth; write `Bb6` for the six chord.
 
 ---
 
@@ -186,8 +189,12 @@ Four knobs:
 `--skip-pen -1.2` is the interesting one: it turns close comping into spread
 chord-melody voicings without moving the hand.
 
-Rootless voicings are preferred automatically. A chord symbol printed in red on the
-sheet means that voicing does contain its root.
+Rootless voicings are preferred automatically. To override this per chord, append `!`
+to force the root **in** (voiced the way it's played) or `~` to force it **out**; the
+choice lives in the chart, next to the music. A plain triad has no root to drop, so the
+same markers pick the **inversion** instead: first inversion (third in the bass) by
+default, root position under `!`. A chord symbol printed in red on the sheet means that
+voicing does contain its root.
 
 ---
 
