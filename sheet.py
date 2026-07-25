@@ -1,7 +1,7 @@
 import sys, os, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from chartparse import parse, flatten
-from voice import lead_free
+from voice import lead_free, strip_root_marker
 from render import draw_glyph, glyph_height, CW, INK, STROKE, MUTE, RULE, ACC
 
 BG="#EEF0EA"; W=820; L=52; R=W-52
@@ -69,9 +69,10 @@ def build(src, mode='tick', home=8.5, span=5.0, switch_pen=3.0, skip_pen=0.25):
                 for ci,sym in enumerate(bar['chords']):
                     cx=x0+bw*(ci+0.5)/n
                     v=vox.get((si,i+j,ci))
+                    label,_=strip_root_marker(sym)          # hide any !/~ from the print
                     p.append(f'<text x="{cx:.1f}" y="{y+18:.0f}" text-anchor="middle" '
                              f'font-family="Helvetica Neue,Arial,sans-serif" font-size="13.5" '
-                             f'font-weight="700" fill="{INK}">{sym}</text>')
+                             f'font-weight="700" fill="{INK}">{label}</text>')
                     if not v: continue
                     _,cd,base,roles,fr,st=v
                     p.append(draw_glyph(cx, gtop, cd, st, mode=mode, sw=3.8))
@@ -118,14 +119,16 @@ def main():
                          'voicings (default: 0.25)')
     a=ap.parse_args()
 
-    src=open(a.source).read()
+    src=open(a.source, encoding='utf-8').read()
     stem=os.path.splitext(a.out or a.source)[0]
     modes=['tick','stretch'] if a.both else [a.mode]
     for mode in modes:
         svg,H=build(src, mode=mode, home=a.home, span=a.span,
                     switch_pen=a.switch_pen, skip_pen=a.skip_pen)
         path = a.out if (a.out and not a.both) else f'{stem}-{mode}.svg'
-        with open(path,'w') as f: f.write(svg)
+        # utf-8 explicitly: the SVG has non-ASCII (·), and the platform default
+        # (cp1252 on Windows) writes bytes a browser can't parse as UTF-8.
+        with open(path,'w',encoding='utf-8') as f: f.write(svg)
         print(f'wrote {path}  ({H}px tall)')
 
 if __name__=='__main__':

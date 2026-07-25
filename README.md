@@ -122,6 +122,7 @@ styles.
 |---|---|
 | `\| chord \|` | one bar |
 | `\| Cm7 F7 \|` | two chords in a bar, split evenly |
+| `Bb6!` / `Bb6~` | force the root **in** (as played) / **out** for that chord |
 | `%` | repeat the previous bar |
 | `\|:` … `:\|` | repeat marks |
 | `{section: name}` | starts a labelled section |
@@ -182,8 +183,10 @@ Four knobs:
 `--skip-pen -1.2` is the interesting one: it turns close comping into spread
 chord-melody voicings without moving the hand.
 
-Rootless voicings are preferred automatically. A chord symbol printed in red on the
-sheet means that voicing does contain its root.
+Rootless voicings are preferred automatically. To override this per chord, append `!`
+to force the root **in** (voiced the way it's played) or `~` to force it **out**; the
+choice lives in the chart, next to the music. A chord symbol printed in red on the sheet
+means that voicing does contain its root.
 
 ---
 

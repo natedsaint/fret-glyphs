@@ -23,6 +23,8 @@ QUAL = {
 
 def parse(sym):
     sym = sym.strip()
+    if sym and sym[-1] in '!~':          # drop root-preference marker, see lead_free
+        sym = sym[:-1]
     i = 2 if len(sym) > 1 and sym[1] in 'b#' else 1
     root, rest = sym[:i], sym[i:]
     rest = rest.replace('\u00b0','o').replace('dim','o')
@@ -126,23 +128,44 @@ def lead_dp(chart, strings, home=7, start=None):
 from itertools import combinations
 ALL_SETS = [tuple(sorted(c, reverse=True)) for c in combinations([6,5,4,3,2,1],3)]
 
+# Root policy. By default rootless voicings are preferred by ROOT_PEN. A chord
+# symbol may carry a per-chord override marker: trailing '!' forces the root IN
+# (voiced as played), '~' forces it OUT. FORCE is large enough to dominate the
+# ordinary voice-leading costs, so the marked category wins whenever it exists.
+ROOT_PEN = 2.5
+FORCE    = 100.0
+
+def strip_root_marker(sym):
+    """('Bb6!', ) -> ('Bb6', 'root'); 'Cm7~' -> ('Cm7','rootless'); else (sym, None)."""
+    s = sym.strip()
+    if s.endswith('!'): return s[:-1], 'root'
+    if s.endswith('~'): return s[:-1], 'rootless'
+    return s, None
+
+def _root_pen(roles, pref):
+    has = 'R' in roles
+    if pref == 'root':     return 0.0   if has else FORCE
+    if pref == 'rootless': return FORCE if has else 0.0
+    return ROOT_PEN if has else 0.0
+
 def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0.25):
     """DP over (string set, fretting). State includes the string set, so the hand
     may move to a skipped set when that keeps the position still."""
     layers=[]
     for sym in chart:
-        r,q = parse(sym)
+        clean,pref = strip_root_marker(sym)
+        r,q = parse(clean)
         cands=[]
         for st in ALL_SETS:
             if prefer and st not in prefer: continue
             for frets,roles in voicings(r,q,st):
                 if abs(sum(frets)/3 - home) <= span:
                     cands.append((st,frets,roles))
-        layers.append((sym,cands))
+        layers.append((sym,cands,pref))
     INF=float('inf'); best=[{} for _ in layers]
-    for i,(sym,cands) in enumerate(layers):
+    for i,(sym,cands,pref) in enumerate(layers):
         for j,(st,frets,roles) in enumerate(cands):
-            pen = 2.5 if 'R' in roles else 0.0
+            pen = _root_pen(roles, pref)
             pen += abs(sum(frets)/3 - home)*0.35
             pen += (st[0]-st[2]-2)*skip_pen      # cost (or reward) for wide skips
             if i==0:
@@ -158,7 +181,7 @@ def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0
                 best[i][j]=(bc+pen,bp)
     out,k=[],min(best[-1],key=lambda x:best[-1][x][0])
     for i in range(len(layers)-1,-1,-1):
-        sym,cands=layers[i]; st,frets,roles=cands[k]
+        sym,cands,pref=layers[i]; st,frets,roles=cands[k]
         cd,base=shape_of(frets,st)
         out.append((sym,cd,base,roles,frets,st)); k=best[i][k][1]
     return out[::-1]
