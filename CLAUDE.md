@@ -42,6 +42,12 @@ generated from the digits.
   for handwriting — same code underneath, like block print vs cursive.
 - **Repeats are not expanded before voicing.** Each written bar is voiced once so a
   repeated section is fingered identically. Don't "simplify" this away.
+- **Skip penalty prefers adjacent strings, but never moves the hand.** `skip_pen`
+  defaults to 0.8 — above the position-band tiebreak, below the 2.5/fret cost of a
+  hand-position move (both in `lead_free`). So an unskipped voicing wins whenever one
+  is reachable without travelling, but a skip is kept when it's the only voicing at the
+  current position. This window is the whole point; don't raise it past ~2.5 (that
+  starts trading hand travel for skip avoidance) without meaning to.
 
 ## Prior art (checked)
 

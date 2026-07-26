@@ -13,7 +13,7 @@ def repeat_dots(x, ytop, ybot, facing):
     return "".join(f'<circle cx="{x+dx:.1f}" cy="{ym+o:.1f}" r="2.6" fill="{INK}"/>'
                    for o in (-8,8))
 
-def build(src, mode='tick', home=8.5, span=5.0, switch_pen=3.0, skip_pen=0.25):
+def build(src, mode='tick', home=8.5, span=5.0, switch_pen=3.0, skip_pen=0.8):
     meta, secs = parse(src)
     flat = flatten(secs)
     res  = lead_free([f[3] for f in flat], home=home, span=span,
@@ -114,9 +114,10 @@ def main():
                     help='how far from home a voicing may stray (default: 5.0)')
     ap.add_argument('--switch-pen', type=float, default=3.0,
                     help='cost of changing string set (default: 3.0)')
-    ap.add_argument('--skip-pen', type=float, default=0.25,
-                    help='cost of skipping strings; negative prefers open '
-                         'voicings (default: 0.25)')
+    ap.add_argument('--skip-pen', type=float, default=0.8,
+                    help='cost per skipped string; prefers unskipped voicings but '
+                         'never moves the hand to avoid a skip. Lower toward 0 or '
+                         'negative for open, spread voicings (default: 0.8)')
     a=ap.parse_args()
 
     src=open(a.source, encoding='utf-8').read()
