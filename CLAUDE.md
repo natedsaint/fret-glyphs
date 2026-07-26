@@ -75,8 +75,16 @@ does the same for a vertical voicing shape. Confirmed no ready-made glyph set to
 - **Four-note voicings.** Would need a 4x3 box and a bigger alphabet. Not attempted.
 - **The 8 stretch shapes have no handwriting forms yet.** They should fall out of the
   existing grammar as angular-belly-plus-flick or double-flick; unverified.
-- **Chart import.** MusicXML would still be the sane route for anything.
-  Handwritten input is no longer the only path: `pdfimport.py` pulls chord symbols
+- **Chart import.** Two paths exist now. `musicxml.py` is the clean one:
+  MusicXML <-> `.pro` both directions, stdlib `xml.etree` only (no dep — the PDF
+  importer stays the sole third-party exception). It maps the *standard* `<kind>`
+  name, not the app's display `text` (iReal uses house shorthand like `-7`/`^7`/`h7`
+  the grammar wouldn't parse), and because MusicXML actually carries structure it
+  recovers repeats, endings, rehearsal-mark sections, and system breaks — the things
+  the PDF path can't. Chords outside this tool's small vocabulary (m6, sus, altered
+  dominants, slash bass) keep their label but are `#?`-flagged. On the iReal Pro blues
+  export it round-trips clean; on `mack.pro` the `|: :|` and all four sections survive
+  export->import. The other path, `pdfimport.py`, pulls chord symbols
   out of an *engraved, digital* PDF into `.pro`. It works because chord symbols
   live in their own font (Finale's RepriseChordsStd et al.), so you filter to
   those spans and never touch the notation — no OMR. On the Mack the Knife guitar
@@ -107,10 +115,12 @@ from the digits) — if a plate and the sheet ever disagree visually, the cause 
 something bypassing `draw_glyph`. `scripts/alphabet_plate.py` regenerates
 `reference/05-anchored.svg` *through* `draw_glyph`, so that plate can't drift from the
 sheet. `chartparse.py` preserves structure.
-`sheet.py` is layout plus CLI. `pdfimport.py` is an **optional** converter (the
-only module that needs a third-party dep, PyMuPDF — the core stays stdlib-only):
-engraved PDF -> `.pro`, by font-filtering chord spans and reconstructing
-systems/bars from staff-line and barline vectors.
+`sheet.py` is layout plus CLI. `musicxml.py` converts MusicXML <-> `.pro` both ways
+(stdlib only); `pdfimport.py` is the one **optional** converter that needs a
+third-party dep, PyMuPDF (the core stays stdlib-only): engraved PDF -> `.pro`, by
+font-filtering chord spans and reconstructing systems/bars from staff-line and
+barline vectors. `tests/` is stdlib `unittest` (`python -m unittest discover tests`),
+covering the MusicXML bridge and the core parse/grammar.
 
 Layout gotcha, hit repeatedly: **derive SVG canvas height from content**, never
 hardcode it. Row height depends on glyph mode, so a fixed height silently clips.
