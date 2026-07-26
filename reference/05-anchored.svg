@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="710" viewBox="0 0 760 710">
+<rect width="760" height="710" fill="#EEF0EA"/>
+<text x="56" y="66" font-family="Helvetica Neue,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="1" fill="#171A16">THE HAND</text>
+<text x="56" y="90" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="1" fill="#8A9184">anchored register · open=top string · half=middle · solid=bottom · diamond=two-fret stretch</text>
+<line x1="56" y1="108" x2="704" y2="108" stroke="#171A16" stroke-width="1.4"/>
+<text x="56" y="140" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">STEM</text>
+<path d="M 64.0 162.0 L 64.0 182.0 L 64.0 202.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64.0" cy="162.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="64.0" cy="182.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 59.0 182.0 A 5.0 5.0 0 0 0 69.0 182.0 Z" fill="#1B4DB3"/>
+<circle cx="64.0" cy="202.0" r="5.00" fill="#1B4DB3"/>
+<text x="77" y="224" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">000</text>
+<text x="56" y="250.0" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">CHEVRON</text>
+<path d="M 64.0 272.0 L 77.0 292.0 L 64.0 312.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64.0" cy="272.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="77.0" cy="292.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 72.0 292.0 A 5.0 5.0 0 0 0 82.0 292.0 Z" fill="#1B4DB3"/>
+<circle cx="64.0" cy="312.0" r="5.00" fill="#1B4DB3"/>
+<text x="77" y="334" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">010</text>
+<path d="M 155.0 272.0 L 142.0 292.0 L 155.0 312.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="155.0" cy="272.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="142.0" cy="292.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 137.0 292.0 A 5.0 5.0 0 0 0 147.0 292.0 Z" fill="#1B4DB3"/>
+<circle cx="155.0" cy="312.0" r="5.00" fill="#1B4DB3"/>
+<text x="155" y="334" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">101</text>
+<path d="M 220.0 272.0 L 246.0 292.0 L 220.0 312.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220.0" cy="272.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="246.0,285.7 252.3,292.0 246.0,298.3 239.7,292.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="239.7,292.0 246.0,298.3 252.3,292.0" fill="#1B4DB3"/>
+<circle cx="220.0" cy="312.0" r="5.00" fill="#1B4DB3"/>
+<text x="233" y="334" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">020</text>
+<path d="M 324.0 272.0 L 298.0 292.0 L 324.0 312.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="324.0" cy="272.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="298.0,285.7 304.3,292.0 298.0,298.3 291.7,292.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="291.7,292.0 298.0,298.3 304.3,292.0" fill="#1B4DB3"/>
+<circle cx="324.0" cy="312.0" r="5.00" fill="#1B4DB3"/>
+<text x="311" y="334" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">202</text>
+<text x="56" y="360.0" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">FLICK</text>
+<path d="M 64.0 382.0 L 64.0 402.0 L 77.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="64.0" cy="402.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 59.0 402.0 A 5.0 5.0 0 0 0 69.0 402.0 Z" fill="#1B4DB3"/>
+<circle cx="77.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="77" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">001</text>
+<path d="M 155.0 382.0 L 155.0 402.0 L 142.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="155.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="155.0" cy="402.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 150.0 402.0 A 5.0 5.0 0 0 0 160.0 402.0 Z" fill="#1B4DB3"/>
+<circle cx="142.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="155" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">110</text>
+<path d="M 233.0 382.0 L 220.0 402.0 L 220.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="233.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="220.0" cy="402.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 215.0 402.0 A 5.0 5.0 0 0 0 225.0 402.0 Z" fill="#1B4DB3"/>
+<circle cx="220.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="233" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">100</text>
+<path d="M 298.0 382.0 L 311.0 402.0 L 311.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="298.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="311.0" cy="402.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 306.0 402.0 A 5.0 5.0 0 0 0 316.0 402.0 Z" fill="#1B4DB3"/>
+<circle cx="311.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="311" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">011</text>
+<path d="M 402.0 382.0 L 376.0 402.0 L 376.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="402.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="376.0,395.7 382.3,402.0 376.0,408.3 369.7,402.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="369.7,402.0 376.0,408.3 382.3,402.0" fill="#1B4DB3"/>
+<circle cx="376.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="389" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">200</text>
+<path d="M 454.0 382.0 L 480.0 402.0 L 480.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="454.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="480.0,395.7 486.3,402.0 480.0,408.3 473.7,402.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="473.7,402.0 480.0,408.3 486.3,402.0" fill="#1B4DB3"/>
+<circle cx="480.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="467" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">022</text>
+<path d="M 532.0 382.0 L 532.0 402.0 L 558.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="532.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="532.0,395.7 538.3,402.0 532.0,408.3 525.7,402.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="525.7,402.0 532.0,408.3 538.3,402.0" fill="#1B4DB3"/>
+<circle cx="558.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="545" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">002</text>
+<path d="M 636.0 382.0 L 636.0 402.0 L 610.0 422.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="636.0" cy="382.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="636.0,395.7 642.3,402.0 636.0,408.3 629.7,402.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="629.7,402.0 636.0,408.3 642.3,402.0" fill="#1B4DB3"/>
+<circle cx="610.0" cy="422.0" r="5.00" fill="#1B4DB3"/>
+<text x="623" y="444" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">220</text>
+<text x="56" y="470.0" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">SLANT</text>
+<path d="M 64.0 492.0 L 77.0 512.0 L 90.0 532.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64.0" cy="492.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="77.0" cy="512.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 72.0 512.0 A 5.0 5.0 0 0 0 82.0 512.0 Z" fill="#1B4DB3"/>
+<circle cx="90.0" cy="532.0" r="5.00" fill="#1B4DB3"/>
+<text x="77" y="554" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">012</text>
+<path d="M 168.0 492.0 L 155.0 512.0 L 142.0 532.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="168.0" cy="492.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<circle cx="155.0" cy="512.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/><path d="M 150.0 512.0 A 5.0 5.0 0 0 0 160.0 512.0 Z" fill="#1B4DB3"/>
+<circle cx="142.0" cy="532.0" r="5.00" fill="#1B4DB3"/>
+<text x="155" y="554" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">210</text>
+<text x="56" y="580.0" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#1B4DB3">ZIGZAG</text>
+<path d="M 64.0 602.0 L 90.0 622.0 L 77.0 642.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64.0" cy="602.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="90.0,615.7 96.3,622.0 90.0,628.3 83.7,622.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="83.7,622.0 90.0,628.3 96.3,622.0" fill="#1B4DB3"/>
+<circle cx="77.0" cy="642.0" r="5.00" fill="#1B4DB3"/>
+<text x="77" y="664" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">021</text>
+<path d="M 168.0 602.0 L 142.0 622.0 L 155.0 642.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="168.0" cy="602.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="142.0,615.7 148.3,622.0 142.0,628.3 135.7,622.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="135.7,622.0 142.0,628.3 148.3,622.0" fill="#1B4DB3"/>
+<circle cx="155.0" cy="642.0" r="5.00" fill="#1B4DB3"/>
+<text x="155" y="664" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">201</text>
+<path d="M 233.0 602.0 L 220.0 622.0 L 246.0 642.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="233.0" cy="602.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="220.0,615.7 226.3,622.0 220.0,628.3 213.7,622.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="213.7,622.0 220.0,628.3 226.3,622.0" fill="#1B4DB3"/>
+<circle cx="246.0" cy="642.0" r="5.00" fill="#1B4DB3"/>
+<text x="233" y="664" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">102</text>
+<path d="M 311.0 602.0 L 324.0 622.0 L 298.0 642.0" fill="none" stroke="#1B4DB3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="311.0" cy="602.0" r="3.80" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4"/>
+<polygon points="324.0,615.7 330.3,622.0 324.0,628.3 317.7,622.0" fill="#EEF0EA" stroke="#1B4DB3" stroke-width="2.4" stroke-linejoin="miter"/><polygon points="317.7,622.0 324.0,628.3 330.3,622.0" fill="#1B4DB3"/>
+<circle cx="298.0" cy="642.0" r="5.00" fill="#1B4DB3"/>
+<text x="311" y="664" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12.5" letter-spacing="2" fill="#171A16">120</text>
+</svg>

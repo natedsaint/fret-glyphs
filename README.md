@@ -97,10 +97,14 @@ lives in [`reference/01-alphabet.svg`](reference/01-alphabet.svg).
   skipped. Compact, uniform line height, fast to write by hand.
 - **stretch** — the stroke spans the real strings, so the picture shows the reach
   directly and needs no extra marks. Unambiguous, but row height becomes variable.
+- **anchored** — tick geometry, but each note is drawn as a node: an open ring on the
+  top string, a half-filled dot on the middle, a solid dot on the bottom (ink deepens as
+  pitch descends, so the glyph reads top-to-bottom on its own). Any two-fret stretch
+  turns the middle node into a diamond, so reach-1 and reach-2 shapes never blur.
 
-Use `-m tick` or `-m stretch`. Same underlying data; only the drawing differs. For
-close voicings stretch is often *shorter* than tick, since an adjacent set is only two
-string-gaps tall.
+Use `-m tick`, `-m stretch`, or `-m anchored`. Same underlying data; only the drawing
+differs. For close voicings stretch is often *shorter* than tick, since an adjacent set
+is only two string-gaps tall.
 
 See `reference/` for the full alphabet, the handwriting forms, and both string-set
 styles.
@@ -205,7 +209,7 @@ voicing does contain its root.
 | `sheet.py` | CLI and sheet layout |
 | `voice.py` | fretboard model, shape enumeration, voice-leading search |
 | `chartparse.py` | changes-file parser; preserves bars, sections, repeats |
-| `render.py` | glyph drawing; the tick/stretch toggle lives here |
+| `render.py` | glyph drawing; the tick/stretch/anchored register toggle lives here |
 | `pdfimport.py` | optional engraved-PDF → changes-file importer (needs PyMuPDF) |
 | `mack.pro` | worked example |
 | `reference/` | the alphabet and notation plates |

@@ -95,8 +95,12 @@ does the same for a vertical voicing shape. Confirmed no ready-made glyph set to
 
 `voice.py` is the engine: fretboard model, shape enumeration, and a Viterbi pass
 (`lead_free`) over every legal shape on all 20 string sets. `render.py` owns all glyph
-drawing and the tick/stretch toggle — if a plate and the sheet ever disagree visually,
-the cause is something bypassing `draw_glyph`. `chartparse.py` preserves structure.
+drawing and the register toggle — `tick`, `stretch`, and `anchored` (endpoints drawn as
+open/half/solid nodes with a diamond middle marking any two-fret stretch, all derived
+from the digits) — if a plate and the sheet ever disagree visually, the cause is
+something bypassing `draw_glyph`. `scripts/alphabet_plate.py` regenerates
+`reference/05-anchored.svg` *through* `draw_glyph`, so that plate can't drift from the
+sheet. `chartparse.py` preserves structure.
 `sheet.py` is layout plus CLI. `pdfimport.py` is an **optional** converter (the
 only module that needs a third-party dep, PyMuPDF — the core stays stdlib-only):
 engraved PDF -> `.pro`, by font-filtering chord spans and reconstructing

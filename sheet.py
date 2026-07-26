@@ -104,7 +104,7 @@ def main():
         description='Render a changes file as a fret-hand glyph sheet (SVG).')
     ap.add_argument('source', help='input .pro changes file')
     ap.add_argument('-o','--out', help='output .svg (default: alongside source)')
-    ap.add_argument('-m','--mode', choices=['tick','stretch'], default='tick',
+    ap.add_argument('-m','--mode', choices=['tick','stretch','anchored'], default='tick',
                     help='glyph style (default: tick)')
     ap.add_argument('--both', action='store_true',
                     help='write both tick and stretch versions')
