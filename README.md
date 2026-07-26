@@ -189,8 +189,9 @@ python3 musicxml.py --export chart.pro -o out.musicxml   # export
 Import reads the `<harmony>` on each measure and maps the *standard* chord kind
 (`dominant`, `minor-seventh`, `major-sixth`…) to a symbol — not the app's display text,
 which uses house shorthand the grammar wouldn't parse. Unlike the PDF path it recovers
-the structure MusicXML actually carries: **repeat barlines, rehearsal marks → sections,
-and system breaks → line grouping**. Any chord this tool can't voice faithfully — a
+the structure MusicXML actually carries: **repeat barlines, 1st/2nd endings, rehearsal
+marks → sections, and system breaks → line grouping**. Any chord this tool can't voice
+faithfully — a
 minor-sixth, a sus, an altered dominant, a slash bass — keeps its label but is
 `#?`-flagged, so you see exactly what to check.
 

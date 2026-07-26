@@ -119,5 +119,32 @@ class RoundTrip(unittest.TestCase):
         self.assertEqual(root.findtext('work/work-title'), 'X')
 
 
+class Endings(unittest.TestCase):
+    PRO = ('|: A7 | D7 |\n'
+           '{ending: 1}\n| A7 :|\n'
+           '{ending: 2}\n| E7 |\n')
+
+    def test_pro_model_carries_endings(self):
+        _, secs = parse_pro(self.PRO)
+        bars = secs[0]['bars']
+        self.assertEqual(bars[2]['ending'], 1)
+        self.assertTrue(bars[2]['re'])                   # 1st ending loops back
+        self.assertEqual(bars[3]['ending'], 2)
+
+    def test_export_writes_ending_brackets(self):
+        root = ET.fromstring(musicxml.export_xml(self.PRO))
+        starts = sorted({e.get('number') for e in root.iter('ending')
+                         if e.get('type') == 'start'})
+        self.assertEqual(starts, ['1', '2'])
+
+    def test_roundtrip_preserves_endings(self):
+        _, rows = musicxml.import_score(ET.fromstring(musicxml.export_xml(self.PRO)))
+        self.assertEqual([r['ending'] for r in rows if r['ending']], [1, 2])
+        self.assertTrue(next(r for r in rows if r['ending'] == 1)['re'])
+        pro = musicxml.to_pro({}, rows)
+        self.assertIn('{ending: 1}', pro)
+        self.assertIn('{ending: 2}', pro)
+
+
 if __name__ == '__main__':
     unittest.main()

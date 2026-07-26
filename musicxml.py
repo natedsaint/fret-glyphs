@@ -103,6 +103,18 @@ def _repeat_dirs(measure):
             if rep.get('direction') == 'backward': bwd = True
     return fwd, bwd
 
+def _ending_start(measure):
+    """The ending number where a bracket OPENS on this measure, else None.
+    A 'number' may be a list ("1, 2"); the first value is enough for the .pro."""
+    for bl in measure.findall('barline'):
+        e = bl.find('ending')
+        if e is not None and e.get('type') == 'start':
+            try:
+                return int(e.get('number', '').split(',')[0])
+            except ValueError:
+                return None
+    return None
+
 def import_xml(path):
     return import_score(ET.parse(path).getroot())
 
@@ -138,8 +150,8 @@ def import_score(root):
         new_sys = m.find('print[@new-system="yes"]') is not None or not rows
         label = _rehearsal(m)
         fwd, bwd = _repeat_dirs(m)
-        rows.append({'cell': cell, 'ok': ok, 'new_sys': new_sys,
-                     'label': label, 'rs': fwd, 're': bwd})
+        rows.append({'cell': cell, 'ok': ok, 'new_sys': new_sys, 'label': label,
+                     'rs': fwd, 're': bwd, 'ending': _ending_start(m)})
     return meta, rows
 
 def to_pro(meta, rows):
@@ -170,8 +182,10 @@ def to_pro(meta, rows):
         if r['label'] and r['label'] != cur_label:
             flush(); out.append(''); out.append(f'{{section: {r["label"]}}}')
             cur_label = r['label']
-        elif r['new_sys'] or r['rs']:
+        elif r['new_sys'] or r['rs'] or r['ending']:
             flush()
+        if r['ending'] and line is None:          # marker applies to the next bar
+            out.append(f'{{ending: {r["ending"]}}}')
         if line is None:
             line = {'cells': [], 'rs': r['rs'], 're': False, 'bad': False}
         line['cells'].append(r['cell'] if r['cell'] else ' ')
@@ -219,6 +233,17 @@ def _harmony_el(sym):
             ET.SubElement(b, 'bass-alter').text = str(ba)
     return h
 
+def _barline(location, style=None, ending=None, ending_type=None, repeat=None):
+    """One barline carrying any of bar-style / ending / repeat, in MusicXML order."""
+    bl = ET.Element('barline', {'location': location})
+    if style:
+        ET.SubElement(bl, 'bar-style').text = style
+    if ending is not None:
+        ET.SubElement(bl, 'ending', {'number': str(ending), 'type': ending_type})
+    if repeat:
+        ET.SubElement(bl, 'repeat', {'direction': repeat})
+    return bl
+
 def _measure_el(n, bar, prev_chords, first):
     m = ET.Element('measure', {'number': str(n)})
     if first:
@@ -227,20 +252,25 @@ def _measure_el(n, bar, prev_chords, first):
     chords = bar['chords']
     if chords == ['%'] or (not chords):
         chords = prev_chords                # expand repeat-bar for standalone XML
-    if bar.get('rs'):
-        bl = ET.SubElement(m, 'barline', {'location': 'left'})
-        ET.SubElement(bl, 'bar-style').text = 'heavy-light'
-        ET.SubElement(bl, 'repeat', {'direction': 'forward'})
+    end = bar.get('ending')
+    if bar.get('rs') or end is not None:    # left: repeat-start and/or ending opens
+        m.append(_barline('left',
+                          style='heavy-light' if bar.get('rs') else None,
+                          ending=end, ending_type='start' if end is not None else None,
+                          repeat='forward' if bar.get('rs') else None))
     for sym in chords:
         m.append(_harmony_el(sym))
     note = ET.SubElement(m, 'note')
     ET.SubElement(note, 'rest')
     ET.SubElement(note, 'duration').text = str(WHOLE)
     ET.SubElement(note, 'type').text = 'whole'
-    if bar.get('re'):
-        bl = ET.SubElement(m, 'barline', {'location': 'right'})
-        ET.SubElement(bl, 'bar-style').text = 'light-heavy'
-        ET.SubElement(bl, 'repeat', {'direction': 'backward'})
+    if bar.get('re') or end is not None:    # right: repeat-end and/or ending closes
+        # a 1st-time ending loops back so it 'stop's; a last ending 'discontinue's
+        et = ('stop' if bar.get('re') else 'discontinue') if end is not None else None
+        m.append(_barline('right',
+                          style='light-heavy' if bar.get('re') else None,
+                          ending=end, ending_type=et,
+                          repeat='backward' if bar.get('re') else None))
     return m, chords
 
 def _key_attributes(meta):
