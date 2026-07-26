@@ -175,9 +175,16 @@ def _triad_pen(roles, pref):
 def _voice_pen(roles, pref, triad):
     return _triad_pen(roles, pref) if triad else _root_pen(roles, pref)
 
-def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0.25):
+def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0.8):
     """DP over (string set, fretting). State includes the string set, so the hand
-    may move to a skipped set when that keeps the position still."""
+    may move to a skipped set when that keeps the position still.
+
+    skip_pen is charged per skipped string. Its default sits in a deliberate window:
+    a hand-position move costs 2.5/fret (below), so any skip_pen < 2.5 can never make
+    the optimiser travel to avoid a skip -- it only breaks ties among voicings at the
+    same position. So 0.8 means: prefer an unskipped voicing whenever one is reachable
+    without moving the hand, but keep a skip when it's the only thing at this position.
+    Lower it toward 0 (or negative) to allow -- or prefer -- open, spread voicings."""
     layers=[]
     for sym in chart:
         clean,pref = strip_root_marker(sym)
@@ -195,7 +202,7 @@ def lead_free(chart, home=7.5, span=3.5, switch_pen=1.2, prefer=None, skip_pen=0
         for j,(st,frets,roles) in enumerate(cands):
             pen = _voice_pen(roles, pref, triad)
             pen += abs(sum(frets)/3 - home)*0.35
-            pen += (st[0]-st[2]-2)*skip_pen      # cost (or reward) for wide skips
+            pen += (st[0]-st[2]-2)*skip_pen      # per skipped string; see default below
             if i==0:
                 best[i][j]=(pen,None)
             else:

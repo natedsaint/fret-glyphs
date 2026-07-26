@@ -184,10 +184,13 @@ Four knobs:
 | `--home` | 8.5 | preferred neck position, in frets |
 | `--span` | 5.0 | how far a voicing may stray from home |
 | `--switch-pen` | 3.0 | cost of changing string set — raise it for fewer crossings |
-| `--skip-pen` | 0.25 | cost of skipping strings. `0` mixes; **negative prefers open voicings** |
+| `--skip-pen` | 0.8 | cost per skipped string. `0` mixes; **negative prefers open voicings** |
 
-`--skip-pen -1.2` is the interesting one: it turns close comping into spread
-chord-melody voicings without moving the hand.
+The default `0.8` prefers voicings on adjacent strings, but is deliberately below the
+cost of a hand-position move, so it never travels the hand just to avoid a skip — it
+only breaks ties at the same position, and keeps a skip when that's the only voicing
+there. `--skip-pen -1.2` is the other interesting one: it turns close comping into
+spread chord-melody voicings without moving the hand.
 
 Rootless voicings are preferred automatically. To override this per chord, append `!`
 to force the root **in** (voiced the way it's played) or `~` to force it **out**; the
