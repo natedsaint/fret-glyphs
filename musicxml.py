@@ -200,6 +200,8 @@ def to_pro(meta, rows):
 
 DIVISIONS = 768
 WHOLE = DIVISIONS * 4
+SYS = 4          # bars per system on export -- mirrors sheet.py's PER row layout,
+                 # so the exported chart breaks lines the way this tool draws them
 
 def _root_of(sym):
     """Split a symbol into (root-letter, alter-int, rest)."""
@@ -244,11 +246,8 @@ def _barline(location, style=None, ending=None, ending_type=None, repeat=None):
         ET.SubElement(bl, 'repeat', {'direction': repeat})
     return bl
 
-def _measure_el(n, bar, prev_chords, first):
+def _measure_el(n, bar, prev_chords):
     m = ET.Element('measure', {'number': str(n)})
-    if first:
-        at = ET.SubElement(m, 'attributes')
-        ET.SubElement(at, 'divisions').text = str(DIVISIONS)
     chords = bar['chords']
     if chords == ['%'] or (not chords):
         chords = prev_chords                # expand repeat-bar for standalone XML
@@ -308,17 +307,18 @@ def export_xml(pro_text):
     for si, sec in enumerate(sections):
         for bi, bar in enumerate(sec['bars']):
             n += 1
-            m, prev = _measure_el(n, bar, prev, first=(n == 1))
-            if n == 1:
-                m.insert(0, _key_attributes(meta))
-                # remove the placeholder divisions-only attributes _measure_el added
-                for at in m.findall('attributes')[1:]:
-                    m.remove(at)
+            m, prev = _measure_el(n, bar, prev)
+            # Prepend the measure-open elements in reverse of their final order,
+            # which is: <print>, <attributes>, <direction>, then the bar body.
             if sec.get('label') and bi == 0:
                 d = ET.Element('direction', {'placement': 'above'})
                 dt = ET.SubElement(d, 'direction-type')
                 ET.SubElement(dt, 'rehearsal').text = sec['label']
                 m.insert(0, d)
+            if n == 1:
+                m.insert(0, _key_attributes(meta))
+            if bi % SYS == 0 and n > 1:      # a new 4-bar row (m1 is implicitly new)
+                m.insert(0, ET.Element('print', {'new-system': 'yes'}))
             part.append(m)
 
     ET.indent(score, space='    ')

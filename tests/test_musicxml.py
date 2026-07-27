@@ -103,6 +103,13 @@ class RoundTrip(unittest.TestCase):
         self.assertEqual([r['cell'] for r in rows2],
                          [r['cell'] for r in rows])
 
+    def test_blues_system_breaks_survive(self):
+        # export mirrors sheet.py's 4-bar rows, reproducing iReal's own breaks
+        meta, rows = musicxml.import_xml(BLUES)
+        xml = musicxml.export_xml(musicxml.to_pro(meta, rows))
+        _, rows2 = self._reimport(xml)
+        self.assertEqual([i for i, r in enumerate(rows2) if r['new_sys']], [0, 4, 8])
+
     def test_mack_repeats_and_sections_survive(self):
         with open(MACK, encoding='utf-8') as f:
             xml = musicxml.export_xml(f.read())
