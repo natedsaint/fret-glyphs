@@ -175,6 +175,31 @@ Treat the output as a fast, verifiable first draft — not a transcription.
 
 ---
 
+## MusicXML, both directions
+
+MusicXML is the interchange format you get out of iReal Pro, MuseScore, Finale, and the
+rest. `musicxml.py` converts it to and from a changes file, and needs **no** extra
+dependency — it's stdlib `xml.etree` only:
+
+```bash
+python3 musicxml.py chart.musicxml -o chart.pro     # import
+python3 musicxml.py --export chart.pro -o out.musicxml   # export
+```
+
+Import reads the `<harmony>` on each measure and maps the *standard* chord kind
+(`dominant`, `minor-seventh`, `major-sixth`…) to a symbol — not the app's display text,
+which uses house shorthand the grammar wouldn't parse. Unlike the PDF path it recovers
+the structure MusicXML actually carries: **repeat barlines, 1st/2nd endings, rehearsal
+marks → sections, and system breaks → line grouping**. Any chord this tool can't voice
+faithfully — a
+minor-sixth, a sus, an altered dominant, a slash bass — keeps its label but is
+`#?`-flagged, so you see exactly what to check.
+
+Export writes a chord-only lead sheet (one whole-rest measure per bar) that opens
+straight back in a notation app, with repeats and sections written out.
+
+---
+
 ## How voicings get chosen
 
 `voice.py` enumerates every legal three-note shape for each chord across all 20 string
@@ -214,8 +239,11 @@ voicing does contain its root.
 | `chartparse.py` | changes-file parser; preserves bars, sections, repeats |
 | `render.py` | glyph drawing; the tick/stretch/anchored register toggle lives here |
 | `pdfimport.py` | optional engraved-PDF → changes-file importer (needs PyMuPDF) |
+| `musicxml.py` | MusicXML ↔ changes-file converter, both directions (stdlib only) |
 | `mack.pro` | worked example |
+| `blues.musicxml` | worked example / test fixture (an iReal Pro export) |
 | `reference/` | the alphabet and notation plates |
+| `tests/` | `python -m unittest discover tests` |
 
 Import it directly if you'd rather script it:
 
@@ -232,9 +260,9 @@ for sym, code, fret, roles, frets, strings in lead_free(['Dm7','G7','C6'], home=
 - **Three notes per voicing.** Four-note shapes would need a 4×3 box and a larger
   alphabet.
 - **Standard tuning only** — change `OPEN` in `voice.py` for anything else.
-- **Import is limited.** `pdfimport.py` reads *engraved, digital* PDFs (see above), but
-  scanned charts (OCR/OMR) and MusicXML are not supported, and repeat/vamp structure is
-  never recovered from a PDF.
+- **Import is limited.** `musicxml.py` reads structured MusicXML (see above) and
+  `pdfimport.py` reads *engraved, digital* PDFs, but scanned charts (OCR/OMR) are not
+  supported, and a PDF never recovers repeat/vamp structure the way MusicXML does.
 - **The example file is a reconstruction.** The bar rhythm in `mack.pro` was inferred
   from a printed chart, including the assumption that the opening `Bb6` is a four-bar
   vamp before the sixteen-bar form. Correct it and re-run; voicings recompute.
